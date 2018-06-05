@@ -1,3 +1,5 @@
+import jdk.internal.util.xml.impl.Input;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -23,11 +25,11 @@ public class CustomerMenu extends JPanel implements ActionListener {
     quit.addActionListener(this);
     
     gbc.fill = GridBagConstraints.HORIZONTAL;
-    gbc.insets = new Insets(20,50,50,20);
+    gbc.insets = new Insets(20,50,20,50);
     
-    gbc.weightx=1;
-    gbc.weighty=1;
-    gbc.ipady=0;
+    gbc.weightx=0;
+    gbc.weighty=0;
+
     gbc.gridx = 3;
     gbc.gridy = 1;
     add(suits,gbc);
@@ -42,7 +44,11 @@ public class CustomerMenu extends JPanel implements ActionListener {
     add(accesories,gbc);
     gbc.gridx = 3;
     gbc.gridy = 0;
+    customerMenu.setFont(new Font("Serif", Font.BOLD, 20));
     add(customerMenu, gbc);
+    gbc.gridx = 3;
+    gbc.gridy = 5;
+    add(quit, gbc);
   }
   public void actionPerformed(ActionEvent event){
     JButton buttonPressed;
