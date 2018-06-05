@@ -1,3 +1,5 @@
+import jdk.internal.util.xml.impl.Input;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -10,8 +12,8 @@ public class UserSignIn extends JPanel implements ActionListener {
   JButton quit = new JButton("QUIT");
   JLabel userNameLabel = new JLabel("USERNAME:");
   JLabel passwordLabel = new JLabel("PASSWORD:");
-  JTextField userNameField = new JTextField();
-  JTextField passwordField = new JTextField();
+  JTextField userNameField = new JTextField(20);
+  JTextField passwordField = new JTextField(20);
   
   public UserSignIn() {
     
@@ -21,26 +23,30 @@ public class UserSignIn extends JPanel implements ActionListener {
     quit.addActionListener(this);
     userNameField.addActionListener(this);
     passwordField.addActionListener(this);
+    userNameField.addActionListener(this);
+    passwordField.addActionListener(this);
     
     gbc.fill = GridBagConstraints.HORIZONTAL;
-    gbc.insets = new Insets(20,50,50,20);
+    gbc.insets = new Insets(20,50,20,50);
     
-    gbc.weightx=1;
-    gbc.weighty=1;
-    gbc.ipady=0;
-    gbc.gridx = 2;
+    gbc.weightx=0;
+    gbc.weighty=0;
+    
+    gbc.gridx = 1;
     gbc.gridy = 0;
+    userNameLabel.setFont(new Font("Serif", Font.BOLD, 18));
     add(userNameLabel,gbc);
-    gbc.gridx = 2;
+    gbc.gridx = 1;
     gbc.gridy = 1;
+    passwordLabel.setFont(new Font("Serif", Font.BOLD, 18));
     add(passwordLabel,gbc);
     gbc.gridx = 2;
-    gbc.gridy = 2;
+    gbc.gridy = 0;
     add(userNameField,gbc);
-    gbc.gridx=2;
-    gbc.gridy=9;
+    gbc.gridx = 2;
+    gbc.gridy = 1;
     add(passwordField,gbc);
-    gbc.gridx = 3;
+    gbc.gridx = 2;
     gbc.gridy = 2;
     add(next, gbc);
     gbc.gridx = 1;
@@ -50,11 +56,14 @@ public class UserSignIn extends JPanel implements ActionListener {
   public void actionPerformed(ActionEvent event){
     JButton buttonPressed;
     
+    System.out.println(userNameField.getText());
+    System.out.println(passwordField.getText());
+    
     if(event.getSource() instanceof JButton){
       buttonPressed = (JButton)(event.getSource());
       
       if(buttonPressed.equals(next)){
-        System.exit(0);
+        SuitUpCanada.setContent(new CustomerMenu());
       }
       else if(buttonPressed.equals(quit)){
         System.exit(0);
