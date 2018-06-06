@@ -29,7 +29,7 @@ public class CustomerMenu extends JPanel implements ActionListener {
     
     gbc.weightx=0;
     gbc.weighty=0;
-
+    
     gbc.gridx = 3;
     gbc.gridy = 1;
     add(suits,gbc);
