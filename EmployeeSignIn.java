@@ -64,14 +64,20 @@ public class EmployeeSignIn extends JPanel implements ActionListener {
   public void actionPerformed(ActionEvent event){
     JButton buttonPressed;
     
-    System.out.println(userNameField.getText());
-    System.out.println(passwordField.getText());
+    String name = employeeNameField.getText();
+    String password = passwordField.getText();
+    String number = employeeNumberField.getText();
     
     if(event.getSource() instanceof JButton){
-      buttonPressed = (JButton)(event.getSource());
-      
+      buttonPressed = (JButton)(event.getSource());    
       if(buttonPressed.equals(next)){
-        SuitUpCanada.setContent(new EmployeeMenu());
+        for(int i=0; i< SuitUpCanada.employeeList.size(); i++){
+          if(SuitUpCanada.employeeList.get(i).getName().equalsIgnoreCase(name) && SuitUpCanada.employeeList.get(i).getPassword().equals(password) && SuitUpCanada.employeeList.get(i).getNumber().equalsIgnoreCase(number)){
+            System.out.println("match");
+            this.setVisible(false);
+            SuitUpCanada.mainGame.add(new EmployeeMenu());
+          }
+        }
       }
       else if(buttonPressed.equals(quit)){
         System.exit(0);
