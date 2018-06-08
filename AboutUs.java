@@ -1,54 +1,61 @@
-/**
- * Auto Generated Java Class.
- */
+import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.imageio.*;
-import java.io.*;
-import java.util.*;
-public class AccountingPanel extends JFrame  {
-  //rows in jtable
-  static int rows=0;
-  //Create a JTable
-  JTable table;
-  
-  static Object rowData[][];
-  JPanel accountingPanel = new JPanel();
-  JLabel title = new JLabel ("Music Checkout Machine",SwingConstants.CENTER);
-    public AccountingPanel(){ 
-    //Set the title of the GUI
-    setTitle("Music Dept. Resource Tracker");
-    //Set the size of the frame and make sure the size can't be changed
-    setSize(900, 900);
-    setResizable(false);
-    
-    //Declare the layouts for the JPanels 
-    FlowLayout layout1 = new FlowLayout();
-    BorderLayout layout2 = new BorderLayout();
-    
-    //Set the layout to GridBagLayout
+class AboutUs extends JPanel implements ActionListener{
+  JButton backButton;
+  AboutUs(){
+    this.setBackground(new Color(245,245,200));
+    JLabel title = new JLabel("About Us", SwingConstants.CENTER);
+    title.setFont(new Font("Lucida Sans Unicode",Font.BOLD,50));
+    backButton = new JButton("BACK");
+    backButton.addActionListener(this);
+    this.setVisible(true);
+    this.setSize(1920,1080);
+    ImageIcon menuPic = new ImageIcon(new ImageIcon("AboutUsPic.png").getImage().getScaledInstance(450,700,Image.SCALE_DEFAULT));
+    JLabel menuLabel = new JLabel(menuPic, SwingConstants.LEFT);
+    JLabel infoText = new JLabel("Influential, innovative and progressive, Suit Up Canada is reinventing a wholly modern approach to fashion.");
+    JLabel infoText2 = new JLabel("Under the new vision of creative director Shah Rukh Khan, Suit Up Canada has redefined luxury for");
+    JLabel infoText3 = new JLabel("the 21st century, further reinforcing its position as one of the world's most desirable fashion houses.");
+    JLabel infoText4 = new JLabel("Eclectic, contemporary, romantic - Suit Up Canada products represent the pinnacle of Canadian craftsmanship");
+    JLabel infoText5 = new JLabel("and are unsurpassed for their quality and attention to detail.");
     setLayout(new GridBagLayout());
-    rowData = new Object [20][4];
-    
-    
-    //Set the name of the columns in the JTable
-    Object columnNames[] = { "Item", "Debit", "Credit", "Date" };
-    
-    //Create the JTable and make it uneditable
-    JTable table = new JTable(rowData, columnNames);
-    
-      /*
-       * isCellEditable
-       * @Description: Makes the information in the table uneditable by the user
-       * @Author: Aziz, James, Jerry
-       * @Param: row the row number of the table
-       * @Param: column the number of the column
-       * @Return: Whether or not the table can be edited by the user
-       */
-      
-    
+    GridBagConstraints gbc = new GridBagConstraints();
+    gbc.insets = new Insets(0,0,0,0);
+    infoText.setFont(new Font("Monotype Corsiva", Font.BOLD + Font.ITALIC, 30));
+    infoText2.setFont(new Font("Book Antiqua", Font.BOLD, 25));
+    infoText3.setFont(new Font("Book Antiqua", Font.BOLD, 25));
+    infoText4.setFont(new Font("Book Antiqua", Font.BOLD, 25));
+    infoText5.setFont(new Font("Book Antiqua", Font.BOLD, 25));
+    gbc.gridx = 1;
+    gbc.gridy = 0;
+    add(title,gbc);
+    gbc.gridx = 0;
+    gbc.gridy = 1;
+    add(menuLabel,gbc);
+    gbc.gridx = 1;
+    gbc.gridy = 1;
+    add(infoText,gbc);
+    gbc.gridx = 1;
+    gbc.gridy = 2;
+    add(infoText2,gbc);
+    gbc.gridx = 1;
+    gbc.gridy = 3;
+    add(infoText3,gbc);
+    gbc.gridx = 1;
+    gbc.gridy = 4;
+    add(infoText4,gbc);
+    gbc.gridx = 1;
+    gbc.gridy = 5;
+    add(infoText5,gbc);
+    gbc.gridx = 2;
+    gbc.gridy = 0;
+    add(backButton,gbc);
+  }
+  public void actionPerformed(ActionEvent e){
+    if(e.getSource().equals(backButton)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new EnterPanel());
     }
-    
-    
+  }
 }
