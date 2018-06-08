@@ -5,7 +5,6 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class EmployeeMenu extends JPanel implements ActionListener {
-  
   GridBagConstraints gbc = new GridBagConstraints();
   
   JLabel employeeMenu = new JLabel("Employee Menu");
@@ -14,6 +13,7 @@ public class EmployeeMenu extends JPanel implements ActionListener {
   JButton quit = new JButton("QUIT");
   
   public EmployeeMenu(){
+      this.setVisible(true);
     setLayout(new GridBagLayout());
     
     hrButton.addActionListener(this);
@@ -47,10 +47,10 @@ public class EmployeeMenu extends JPanel implements ActionListener {
       buttonPressed = (JButton)(event.getSource());
       
       if(buttonPressed.equals(hrButton)){
-        SuitUpCanada.setContent(new HumanResources());
+        SuitUpCanada.mainGame.add(new HumanResources());
       }
-      else if(buttonPressed.equals(accoutingButton)){
-        SuitUpCanada.setContent(new Accouting());
+      else if(buttonPressed.equals(accountingButton)){
+        SuitUpCanada.mainGame.add(new AccountingPanel());
       }
       else if(buttonPressed.equals(quit)){
         System.exit(0);
