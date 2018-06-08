@@ -61,7 +61,7 @@ public class UserSignIn extends JPanel implements ActionListener {
       buttonPressed = (JButton)(event.getSource());
       
       if(buttonPressed.equals(next)){
-        SuitUpCanada.setContent(new CustomerMenu());
+        SuitUpCanada.mainGame.add(new CustomerMenu());
       }
       else if(buttonPressed.equals(quit)){
         System.exit(0);
