@@ -23,8 +23,6 @@ public class UserSignIn extends JPanel implements ActionListener {
     quit.addActionListener(this);
     userNameField.addActionListener(this);
     passwordField.addActionListener(this);
-    userNameField.addActionListener(this);
-    passwordField.addActionListener(this);
     
     gbc.fill = GridBagConstraints.HORIZONTAL;
     gbc.insets = new Insets(20,50,20,50);
