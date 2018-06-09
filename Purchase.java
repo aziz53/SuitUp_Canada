@@ -1,5 +1,3 @@
-import jdk.internal.util.xml.impl.Input;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -75,11 +73,13 @@ public class Purchase extends JPanel implements ActionListener {
     if(event.getSource() instanceof JButton){
       buttonPressed = (JButton)(event.getSource());
       
-      if(buttonPressed.equals(confirm)){
-        SuitUpCanada.setContent(new CustomerMenu());
+      if(event.getSource().equals(confirm)){
+        this.setVisible(false);
+        SuitUpCanada.mainGame.add(new CustomerMenu());
       }
-      else if(buttonPressed.equals(previous)){
-        SuitUpCanada.setContent(new CustomerMenu());
+      else if(event.getSource().equals(previous)){
+        this.setVisible(false);
+        SuitUpCanada.mainGame.add(new CustomerMenu());
       }
       else if(buttonPressed.equals(quit)){
         System.exit(0);
