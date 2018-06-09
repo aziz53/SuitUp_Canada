@@ -1,5 +1,3 @@
-import jdk.internal.util.xml.impl.Input;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -59,11 +57,10 @@ public class UserSignIn extends JPanel implements ActionListener {
     
     if(event.getSource() instanceof JButton){
       buttonPressed = (JButton)(event.getSource());
-      
-      if(buttonPressed.equals(next)){
-        SuitUpCanada.mainGame.add(new CustomerMenu());
-      }
-      else if(buttonPressed.equals(quit)){
+    if(event.getSource().equals(next)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new CustomerMenu());
+    }else if(buttonPressed.equals(quit)){
         System.exit(0);
       }
     }
