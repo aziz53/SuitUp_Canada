@@ -1,4 +1,3 @@
-import jdk.internal.util.xml.impl.Input;
 import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -52,30 +51,24 @@ public class Shoes extends JPanel implements ActionListener {
     gbc.gridy = 1;
     add(quit,gbc);
   }
-  public void actionPerformed(ActionEvent event){
-    JButton buttonPressed;
-    
-    if(event.getSource() instanceof JButton){
-      buttonPressed = (JButton)(event.getSource());
-      
-      if(buttonPressed.equals(quit)){
-        System.exit(0);
-      }
-      else if (buttonPressed.equals(shoes1)){
-        SuitUpCanada.setContent(new Shoes1());
-      }
-      else if (buttonPressed.equals(shoes2)){
-        SuitUpCanada.setContent(new Shoes2());
-      }
-      else if (buttonPressed.equals(shoes3)){
-        SuitUpCanada.setContent(new Shoes3());
-      }
-      else if (buttonPressed.equals(shoes4)){
-        SuitUpCanada.setContent(new Shoes4());
-      }
-      else if(buttonPressed.equals(previous)){
-        SuitUpCanada.setContent(new CustomerMenu());
-      }
+  public void actionPerformed(ActionEvent e){
+    if(e.getSource().equals(previous)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new CustomerMenu());
+    }else if(e.getSource().equals(quit)){
+      System.exit(0);
+    }else if(e.getSource().equals(shoes1)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Shoes1());
+    }else if(e.getSource().equals(shoes2)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Shoes2());
+    }else if(e.getSource().equals(shoes3)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Shoes3());
+    }else if(e.getSource().equals(shoes4)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Shoes4());
     }
   }
 }
@@ -135,21 +128,15 @@ class Shoes1 extends JPanel implements ActionListener {
     gbc.gridy = 3;
     add(previous, gbc);
   }
-  public void actionPerformed(ActionEvent event){
-    JButton buttonPressed;
-    
-    if(event.getSource() instanceof JButton){
-      buttonPressed = (JButton)(event.getSource());
-      
-      if(buttonPressed.equals(quit)){
-        System.exit(0);
-      }
-      else if(buttonPressed.equals(previous)){
-        SuitUpCanada.setContent(new Shoes());
-      }
-      else if(buttonPressed.equals(purchase)){
-        SuitUpCanada.setContent(new Purchase());
-      }
+  public void actionPerformed(ActionEvent e){
+    if(e.getSource().equals(previous)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Shoes());
+    }else if(e.getSource().equals(quit)){
+      System.exit(0);
+    }else if(e.getSource().equals(purchase)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Purchase());
     }
   }
 }
@@ -204,21 +191,15 @@ class Shoes2 extends JPanel implements ActionListener {
     gbc.gridy = 3;
     add(previous, gbc);
   }
-  public void actionPerformed(ActionEvent event){
-    JButton buttonPressed;
-    
-    if(event.getSource() instanceof JButton){
-      buttonPressed = (JButton)(event.getSource());
-      
-      if(buttonPressed.equals(quit)){
-        System.exit(0);
-      }
-      else if(buttonPressed.equals(previous)){
-        SuitUpCanada.setContent(new Shoes());
-      }
-      else if(buttonPressed.equals(purchase)){
-        SuitUpCanada.setContent(new Purchase());
-      }
+  public void actionPerformed(ActionEvent e){
+    if(e.getSource().equals(previous)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Shoes());
+    }else if(e.getSource().equals(quit)){
+      System.exit(0);
+    }else if(e.getSource().equals(purchase)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Purchase());
     }
   }
 }
@@ -273,21 +254,15 @@ class Shoes3 extends JPanel implements ActionListener {
     gbc.gridy = 3;
     add(previous, gbc);
   }
-  public void actionPerformed(ActionEvent event){
-    JButton buttonPressed;
-    
-    if(event.getSource() instanceof JButton){
-      buttonPressed = (JButton)(event.getSource());
-      
-      if(buttonPressed.equals(quit)){
-        System.exit(0);
-      }
-      else if(buttonPressed.equals(previous)){
-        SuitUpCanada.setContent(new Shoes());
-      }
-      else if(buttonPressed.equals(purchase)){
-        SuitUpCanada.setContent(new Purchase());
-      }
+  public void actionPerformed(ActionEvent e){
+    if(e.getSource().equals(previous)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Shoes());
+    }else if(e.getSource().equals(quit)){
+      System.exit(0);
+    }else if(e.getSource().equals(purchase)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Purchase());
     }
   }
 }
@@ -347,21 +322,15 @@ class Shoes4 extends JPanel implements ActionListener {
     gbc.gridy = 3;
     add(previous, gbc);
   }
-  public void actionPerformed(ActionEvent event){
-    JButton buttonPressed;
-    
-    if(event.getSource() instanceof JButton){
-      buttonPressed = (JButton)(event.getSource());
-      
-      if(buttonPressed.equals(quit)){
-        System.exit(0);
-      }
-      else if(buttonPressed.equals(previous)){
-        SuitUpCanada.setContent(new Shoes());
-      }
-      else if(buttonPressed.equals(purchase)){
-        SuitUpCanada.setContent(new Purchase());
-      }
+  public void actionPerformed(ActionEvent e){
+    if(e.getSource().equals(previous)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Shoes());
+    }else if(e.getSource().equals(quit)){
+      System.exit(0);
+    }else if(e.getSource().equals(purchase)){
+      this.setVisible(false);
+      SuitUpCanada.mainGame.add(new Purchase());
     }
   }
 }
