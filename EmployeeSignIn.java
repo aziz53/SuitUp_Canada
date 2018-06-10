@@ -71,6 +71,7 @@ public class EmployeeSignIn extends JPanel implements ActionListener {
     if(event.getSource() instanceof JButton){
       buttonPressed = (JButton)(event.getSource());    
       if(buttonPressed.equals(next)){
+        boolean signedIn = false;
         for(int i=0; i< SuitUpCanada.employeeList.size(); i++){
           if(SuitUpCanada.employeeList.get(i).getName().equalsIgnoreCase(name) && SuitUpCanada.employeeList.get(i).getPassword().equals(password) && SuitUpCanada.employeeList.get(i).getNumber().equalsIgnoreCase(number)){
             System.out.println("match");
@@ -78,9 +79,13 @@ public class EmployeeSignIn extends JPanel implements ActionListener {
             SuitUpCanada.currentNum = SuitUpCanada.employeeList.get(i).getNumber();
             SuitUpCanada.currentPosition = SuitUpCanada.employeeList.get(i).getPosition();
             SuitUpCanada.currentStatus = SuitUpCanada.employeeList.get(i).getStatus();
+            signedIn = true;
             this.setVisible(false);
             SuitUpCanada.mainGame.add(new EmployeeMenu());
           }
+        }
+        if(signedIn == false){
+          JOptionPane.showMessageDialog(SuitUpCanada.mainGame,"Invalid log in");
         }
       }
       else if(buttonPressed.equals(quit)){
