@@ -74,6 +74,10 @@ public class EmployeeSignIn extends JPanel implements ActionListener {
         for(int i=0; i< SuitUpCanada.employeeList.size(); i++){
           if(SuitUpCanada.employeeList.get(i).getName().equalsIgnoreCase(name) && SuitUpCanada.employeeList.get(i).getPassword().equals(password) && SuitUpCanada.employeeList.get(i).getNumber().equalsIgnoreCase(number)){
             System.out.println("match");
+            SuitUpCanada.currentName = SuitUpCanada.employeeList.get(i).getName();
+            SuitUpCanada.currentNum = SuitUpCanada.employeeList.get(i).getNumber();
+            SuitUpCanada.currentPosition = SuitUpCanada.employeeList.get(i).getPosition();
+            SuitUpCanada.currentStatus = SuitUpCanada.employeeList.get(i).getStatus();
             this.setVisible(false);
             SuitUpCanada.mainGame.add(new EmployeeMenu());
           }
