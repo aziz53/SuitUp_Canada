@@ -106,6 +106,7 @@ class AddEmployee extends JPanel implements ActionListener{
         for(int i=0; i< SuitUpCanada.employeeList.size(); i++){
           System.out.println(SuitUpCanada.employeeList.get(i).getName() + " " + SuitUpCanada.employeeList.get(i).getNumber() + " " + SuitUpCanada.employeeList.get(i).getPassword() + " " + SuitUpCanada.employeeList.get(i).getPosition() + " " + SuitUpCanada.employeeList.get(i).getSalary() + " " + SuitUpCanada.employeeList.get(i).getStatus()); 
         }
+        JOptionPane.showMessageDialog(SuitUpCanada.mainGame,"You have successfully added an employee");
         this.setVisible(false);
         try{
         SuitUpCanada.mainGame.add(new HumanResources());
