@@ -58,6 +58,10 @@ class RemoveEmployee extends JPanel implements ActionListener{
         boolean changed = false;
         for(int i=0; i<SuitUpCanada.employeeList.size(); i++){
           if(SuitUpCanada.employeeList.get(i).getName().equalsIgnoreCase(name.getText()) && SuitUpCanada.employeeList.get(i).getNumber().equalsIgnoreCase(number.getText())){
+            if(SuitUpCanada.employeeList.get(i).getStatus() <= SuitUpCanada.currentStatus){
+              JOptionPane.showMessageDialog(SuitUpCanada.mainGame,"You cannot fire employees with equal or greater status");
+              return;
+            }
             output.println("Employee: " + SuitUpCanada.employeeList.get(i).getName() + " Number: " + SuitUpCanada.employeeList.get(i).getNumber() + " was fired by " + "Employee: " + SuitUpCanada.currentName + " Number: " + SuitUpCanada.currentNum);
             SuitUpCanada.employeeList.remove(i);
             output.close();
