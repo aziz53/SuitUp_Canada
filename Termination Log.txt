@@ -1,0 +1,3 @@
+Employee: Jerry Yu Number: 12346 was fired by Employee: James Ball Number: 12345
+Employee: James Ball Number: 12345 was fired by Employee: James Ball Number: 12345
+Employee: Justin Granofsky Number: 12348 was fired by Employee: James Ball Number: 12345

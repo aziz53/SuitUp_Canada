@@ -1,0 +1,4 @@
+James Ball 12345 ottawa ceo $1000000 1
+Jerry Yu 12346 softEng intern $10 3
+Corey Cazes 12347 tryHard intern $5 3
+Bill Wu 12349 justFried intern $1.25 3
