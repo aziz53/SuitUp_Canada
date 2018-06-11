@@ -9,7 +9,6 @@ public class CustomerMenu extends JPanel implements ActionListener {
   JLabel customerMenu = new JLabel("Customer Menu");
   JButton suits = new JButton("SUITS");
   JButton shoes = new JButton("SHOES");
-  JButton dresses = new JButton("DRESSES");
   JButton accesories = new JButton("ACCESORIES");
   JButton quit = new JButton("QUIT");
   JButton previous = new JButton("PREVIOUS");
@@ -21,7 +20,6 @@ public class CustomerMenu extends JPanel implements ActionListener {
     
     suits.addActionListener(this);
     shoes.addActionListener(this);
-    dresses.addActionListener(this);
     accesories.addActionListener(this);
     quit.addActionListener(this);
     previous.addActionListener(this);
@@ -38,9 +36,6 @@ public class CustomerMenu extends JPanel implements ActionListener {
     gbc.gridx = 3;
     gbc.gridy = 2;
     add(shoes,gbc);
-    gbc.gridx = 3;
-    gbc.gridy = 3;
-    add(dresses,gbc);
     gbc.gridx=3;
     gbc.gridy=4;
     add(accesories,gbc);
@@ -58,7 +53,7 @@ public class CustomerMenu extends JPanel implements ActionListener {
   public void actionPerformed(ActionEvent e){
     if(e.getSource().equals(previous)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new EnterPanel());
+      SuitUpCanada.mainGame.add(new Login());
     }else if(e.getSource().equals(suits)){
       this.setVisible(false);
       SuitUpCanada.mainGame.add(new Suits());
@@ -68,6 +63,8 @@ public class CustomerMenu extends JPanel implements ActionListener {
     }else if(e.getSource().equals(accesories)){
       this.setVisible(false);
       SuitUpCanada.mainGame.add(new Accesories());
+    }else if(e.getSource().equals(quit)){
+      System.exit(0);
     }
   }
 }
