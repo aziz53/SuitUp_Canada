@@ -40,7 +40,7 @@ class Login extends JPanel implements ActionListener{
       SuitUpCanada.mainGame.add(new EnterPanel());
     }else if(e.getSource().equals(userButton)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new UserSignIn());
+      SuitUpCanada.mainGame.add(new CustomerMenu());
     }else if(e.getSource().equals(employeeButton)){
       this.setVisible(false);
       SuitUpCanada.mainGame.add(new EmployeeSignIn());
