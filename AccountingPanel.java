@@ -8,11 +8,11 @@ public class AccountingPanel extends JPanel implements ActionListener  {
   JButton addItem;
   JButton removeItem;
   JButton backButton;
-  DefaultTableModel accountingModel;
-  JScrollPane tableScroller;
-  static int rows=0;
+   DefaultTableModel accountingModel;
+ JScrollPane tableScroller;
+  int rows=0;
   JTable table;
-  static Object rowData[][];
+  Object rowData[][];
   JLabel title;
   
   JTextField debit;
@@ -56,28 +56,29 @@ public class AccountingPanel extends JPanel implements ActionListener  {
    String columnNames[] = { "Item", "Debit", "Credit", "Date" };
    accountingModel = new DefaultTableModel(columnNames,1);
    table = new JTable(accountingModel);
+   for(int i=0; i<SuitUpCanada.accountingEntries.size(); i++){
+      String debit1 = SuitUpCanada.accountingEntries.get(i).getDebit();
+      String credit1 = SuitUpCanada.accountingEntries.get(i).getCredit();
+      String date1 = SuitUpCanada.accountingEntries.get(i).getDate();
+      String item1 = SuitUpCanada.accountingEntries.get(i).getService();
+     System.out.println(debit1 + " " + credit1 + " " + date1 + " " + item1);
+      Object[] data1 = {item1,debit1,credit1,date1};
+      accountingModel.addRow(data1);
+    }
+       table.setEnabled(false);
    tableScroller= new JScrollPane(table);
    gbc.gridx=0;
     gbc.gridy=1;
     this.add(tableScroller,gbc);
-    gbc.gridx=-1;
+    gbc.gridx=0;
     gbc.gridy=2;
-    this.add(debitItem,gbc);
-    gbc.gridx=1;
-    gbc.gridy=0;
-    this.add(debit,gbc);
-    gbc.gridx=2;
-    gbc.gridy=0;
-    this.add(creditItem,gbc);
-    gbc.gridx=1;
-    gbc.gridy=1;
-    this.add(credit,gbc);
-    gbc.gridx=2;
-    gbc.gridy=1;
-    this.add(dateItem,gbc);
-    gbc.gridx=5;
-    gbc.gridy=0;
-    this.add(date,gbc);
+    this.add(addItem,gbc);
+    gbc.gridx=0;
+    gbc.gridy=3;
+    this.add(removeItem,gbc);
+    gbc.gridx=0;
+    gbc.gridy=4;
+    this.add(backButton,gbc);
     
     //Create the JTable and make it uneditable
  table = new JTable(rowData, columnNames);
@@ -102,18 +103,18 @@ public class AccountingPanel extends JPanel implements ActionListener  {
       
       if(buttonPressed.equals(addItem)){
         this.setVisible(false);
-        this.add(new AccountingPanel());
-        SuitUpCanada.mainGame.add(new AccountingPanel());
+        this.add(new AddItem());
+        SuitUpCanada.mainGame.add(new AddItem());
       }
       else if(buttonPressed.equals(removeItem)) {
         this.setVisible(false);
-        this.add(new HumanResources());
-        SuitUpCanada.mainGame.add(new HumanResources());
+        this.add(new RemoveItem());
+        SuitUpCanada.mainGame.add(new RemoveItem());
       }
       else if(buttonPressed.equals(backButton)) {
         this.setVisible(false);
-        this.add(new HumanResources());
-        SuitUpCanada.mainGame.add(new HumanResources());
+        this.add(new EmployeeMenu());
+        SuitUpCanada.mainGame.add(new EmployeeMenu());
       }
      
     }
