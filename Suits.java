@@ -99,6 +99,7 @@ class Suit1 extends JPanel implements ActionListener {
   JLabel cost = new JLabel("$275.95");
   
   public Suit1(){
+    this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,15));
@@ -176,16 +177,14 @@ class Suit2 extends JPanel implements ActionListener {
   JLabel title = new JLabel("Woolwich Charcoal Slim Fit Infinity Suit");
   JLabel description = new JLabel("Combining the benefits of top quality fabric, durability and great fit, the"); 
   JLabel description2 = new JLabel("Woolwich Charcoal Slim Fit Infinity Suit is ideal for keeping up with the demands"); 
-  JLabel description3 = new JLabel("of modern working life. Crafted from Super 120's Merino wool, the secret is the"); 
-  JLabel description4 = new JLabel("innovative open weave cloth made from 4 yarns twisted together, this means not"); 
-  JLabel description5 = new JLabel("only is it naturally anti-crease but moisture wicking so you'll stay cool,"); 
-  JLabel description6 = new JLabel("comfortable and sharp all day long. Whether you're packing it for a business trip"); 
-  JLabel description7 = new JLabel("or wearing it on a long journey, the high recovery rate and natural elasticity of"); 
-  JLabel description8 = new JLabel("the merino wool ensures your suit will look as sharp as when you first put it on."); 
-  JLabel description9 = new JLabel("Cut in our best selling slim fit, this suit is sure to become your new everyday option.");
+  JLabel description3 = new JLabel("of modern working life. Whether you're packing it for a business trip"); 
+  JLabel description4 = new JLabel("or wearing it on a long journey, the high recovery rate and natural elasticity of"); 
+  JLabel description5 = new JLabel("the merino wool ensures your suit will look as sharp as when you first put it on."); 
+  JLabel description6 = new JLabel("Cut in our best selling slim fit, this suit is sure to become your new everyday option.");
   JLabel cost = new JLabel("$432.14");
   
   public Suit2(){
+    this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,15));
@@ -195,9 +194,6 @@ class Suit2 extends JPanel implements ActionListener {
     description4.setFont(new Font("Helvetica",Font.BOLD,15));
     description5.setFont(new Font("Helvetica",Font.BOLD,15));
     description6.setFont(new Font("Helvetica",Font.BOLD,15));
-    description7.setFont(new Font("Helvetica",Font.BOLD,15));
-    description8.setFont(new Font("Helvetica",Font.BOLD,15));
-    description9.setFont(new Font("Helvetica",Font.BOLD,15));
     cost.setFont(new Font("Helvetica",Font.BOLD,15));
     
     purchase.addActionListener(this);
@@ -233,15 +229,6 @@ class Suit2 extends JPanel implements ActionListener {
     gbc.gridx = 2;
     gbc.gridy = 7;
     add(description6, gbc);
-    gbc.gridx = 2;
-    gbc.gridy = 8;
-    add(description7, gbc);
-    gbc.gridx = 2;
-    gbc.gridy = 9;
-    add(description8, gbc);
-    gbc.gridx = 2;
-    gbc.gridy = 10;
-    add(description9, gbc);
     gbc.gridx = 2;
     gbc.gridy = 1;
     add(cost, gbc);
@@ -283,6 +270,7 @@ class Suit3 extends JPanel implements ActionListener {
   JLabel cost = new JLabel("$999.99");
   
   public Suit3(){
+    this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,15));
@@ -356,6 +344,7 @@ class Suit4 extends JPanel implements ActionListener {
   JLabel cost = new JLabel("$499.99");
   
   public Suit4(){
+    this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,15));
@@ -428,6 +417,7 @@ class Suit5 extends JPanel implements ActionListener {
   JLabel cost = new JLabel("$999.99");
   
   public Suit5(){
+    this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,15));
