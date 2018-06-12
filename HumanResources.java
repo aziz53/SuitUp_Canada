@@ -13,8 +13,11 @@ class HumanResources extends JPanel implements ActionListener{
   JButton addEmployee;
   JButton removeEmployee;
   JButton back;
-  HumanResources() throws Exception{
+  HumanResources() {
+    try {
     output = new PrintWriter(new File("Employee Info.txt"));
+    } catch(Exception e) {
+    }
     for(int i=0; i<SuitUpCanada.employeeList.size(); i++){
       output.println(SuitUpCanada.employeeList.get(i).getName() + " " + SuitUpCanada.employeeList.get(i).getNumber() + " " + SuitUpCanada.employeeList.get(i).getPassword() + " " + SuitUpCanada.employeeList.get(i).getPosition() + " " + SuitUpCanada.employeeList.get(i).getSalary() + " " + SuitUpCanada.employeeList.get(i).getStatus());
     }
@@ -61,8 +64,10 @@ class HumanResources extends JPanel implements ActionListener{
     gbc.gridx = 0;
     gbc.gridy = 4;
     this.add(back,gbc);
+    this.setVisible(true);
   }
   public void actionPerformed(ActionEvent e){
+    this.setVisible(true);
     if(e.getSource().equals(addEmployee)){
       this.setVisible(false);
       SuitUpCanada.mainGame.add(new AddEmployee());

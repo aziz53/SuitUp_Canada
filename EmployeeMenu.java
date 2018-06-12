@@ -40,17 +40,21 @@ public class EmployeeMenu extends JPanel implements ActionListener {
     gbc.gridy = 5;
     add(quit, gbc);
   }
-  public void actionPerformed(ActionEvent event){
+  public void actionPerformed(ActionEvent event) {
     JButton buttonPressed;
     
     if(event.getSource() instanceof JButton){
       buttonPressed = (JButton)(event.getSource());
       
-      if(buttonPressed.equals(hrButton)){
-        SuitUpCanada.mainGame.add(new HumanResources());
-      }
-      else if(buttonPressed.equals(accountingButton)){
+      
+      if(buttonPressed.equals(accountingButton)){
+        this.add(new AccountingPanel());
         SuitUpCanada.mainGame.add(new AccountingPanel());
+      }
+      else if(buttonPressed.equals(hrButton)) {
+        this.setVisible(false);
+        this.add(new HumanResources());
+        SuitUpCanada.mainGame.add(new HumanResources());
       }
       else if(buttonPressed.equals(quit)){
         System.exit(0);
