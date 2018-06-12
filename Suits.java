@@ -2,6 +2,7 @@ import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import jdk.internal.util.xml.impl.Input;
 
 public class Suits extends JPanel implements ActionListener {
   GridBagConstraints gbc = new GridBagConstraints();
@@ -100,6 +101,7 @@ class Suit1 extends JPanel implements ActionListener {
   
   public Suit1(){
     this.setBackground(new Color(255,255,255));
+    
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,25));
@@ -161,7 +163,9 @@ class Suit1 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
@@ -185,6 +189,7 @@ class Suit2 extends JPanel implements ActionListener {
   
   public Suit2(){
     this.setBackground(new Color(255,255,255));
+    
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,25));
@@ -250,7 +255,9 @@ class Suit2 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
@@ -271,6 +278,7 @@ class Suit3 extends JPanel implements ActionListener {
   
   public Suit3(){
     this.setBackground(new Color(255,255,255));
+    
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,25));
@@ -324,7 +332,9 @@ class Suit3 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
@@ -345,6 +355,7 @@ class Suit4 extends JPanel implements ActionListener {
   
   public Suit4(){
     this.setBackground(new Color(255,255,255));
+    
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,25));
@@ -398,7 +409,9 @@ class Suit4 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
@@ -418,6 +431,7 @@ class Suit5 extends JPanel implements ActionListener {
   
   public Suit5(){
     this.setBackground(new Color(255,255,255));
+    
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,25));
@@ -467,7 +481,9 @@ class Suit5 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
