@@ -1,3 +1,6 @@
+import jdk.internal.util.xml.impl.Input;
+
+import java.io.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -67,15 +70,24 @@ public class Purchase extends JPanel implements ActionListener {
   public void actionPerformed(ActionEvent event){
     JButton buttonPressed;
     
-    System.out.println(nameField.getText());
-    System.out.println(creditCardField.getText());
+    String name = nameField.getText();
+    String creditCard = creditCardField.getText();
+    String address = addressField.getText();
     
     if(event.getSource() instanceof JButton){
       buttonPressed = (JButton)(event.getSource());
       
       if(event.getSource().equals(confirm)){
-        this.setVisible(false);
-        SuitUpCanada.mainGame.add(new CustomerMenu());
+        boolean purchased = false;
+        if(0 < name.length() && creditCard.length() == 16 && 0 < address.length()){
+          purchased = true;
+          JOptionPane.showMessageDialog(SuitUpCanada.mainGame, "Succesfully Purchased");
+          this.setVisible(false);
+          SuitUpCanada.mainGame.add(new CustomerMenu());
+        }
+        if(purchased == false){
+          JOptionPane.showMessageDialog(SuitUpCanada.mainGame,"Invalid Information");
+        }
       }
       else if(event.getSource().equals(previous)){
         this.setVisible(false);
