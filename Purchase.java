@@ -1,11 +1,12 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.io.*;
 
 public class Purchase extends JPanel implements ActionListener {
   
   GridBagConstraints gbc = new GridBagConstraints();
-  
+  PrintWriter output;
   JButton previous = new JButton("PREVIOUS");
   JButton confirm = new JButton("CONFIRM");
   JButton quit = new JButton("QUIT");
@@ -16,8 +17,8 @@ public class Purchase extends JPanel implements ActionListener {
   JTextField creditCardField = new JTextField(20);
   JTextField addressField = new JTextField(20);
   
-  public Purchase() {
-    
+  public Purchase()throws Exception {
+        output = new PrintWriter(new FileWriter("Receipt.txt",true));
     setLayout(new GridBagLayout());
     
     previous.addActionListener(this);
@@ -79,6 +80,8 @@ public class Purchase extends JPanel implements ActionListener {
         if(0 < name.length() && creditCard.length() == 16 && 0 < address.length()){
           purchased = true;
           JOptionPane.showMessageDialog(SuitUpCanada.mainGame, "Succesfully Purchased");
+          output.println("Item Purchased by: " + name + " Address: " + address + " Credit Card Number: " + creditCard);
+          output.close();
           this.setVisible(false);
           SuitUpCanada.mainGame.add(new CustomerMenu());
         }
