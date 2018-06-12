@@ -1,4 +1,3 @@
-import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -88,6 +87,7 @@ class Shoes1 extends JPanel implements ActionListener {
   
   public Shoes1(){
     this.setBackground(new Color(255,255,255));
+    
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,25));
@@ -137,7 +137,9 @@ class Shoes1 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
@@ -156,6 +158,7 @@ class Shoes2 extends JPanel implements ActionListener {
   
   public Shoes2(){
     this.setBackground(new Color(255,255,255));
+    
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,25));
@@ -201,7 +204,9 @@ class Shoes2 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
+              try{
       SuitUpCanada.mainGame.add(new Purchase());
+              }catch(Exception exception){};
     }
   }
 }
@@ -220,6 +225,7 @@ class Shoes3 extends JPanel implements ActionListener {
   
   public Shoes3(){
     this.setBackground(new Color(255,255,255));
+    
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,25));
@@ -265,7 +271,9 @@ class Shoes3 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
@@ -285,6 +293,7 @@ class Shoes4 extends JPanel implements ActionListener {
   
   public Shoes4(){
     this.setBackground(new Color(255,255,255));
+    
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,25));
@@ -334,7 +343,9 @@ class Shoes4 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
