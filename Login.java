@@ -30,8 +30,8 @@ class Login extends JPanel implements ActionListener{
     gbc.gridx = 0;
     gbc.gridy = 2;
     add(userButton,gbc);
-    gbc.gridx = 1;
-    gbc.gridy = 0;
+    gbc.gridx = 0;
+    gbc.gridy = 3;
     add(backButton,gbc);
   }
   public void actionPerformed(ActionEvent e){
