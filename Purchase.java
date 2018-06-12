@@ -1,6 +1,3 @@
-import jdk.internal.util.xml.impl.Input;
-
-import java.io.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
