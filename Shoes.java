@@ -90,10 +90,10 @@ class Shoes1 extends JPanel implements ActionListener {
     this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
-    title.setFont(new Font("Helvetica",Font.BOLD,15));
+    title.setFont(new Font("Helvetica",Font.BOLD,25));
     description.setFont(new Font("Helvetica",Font.BOLD,15));
     description2.setFont(new Font("Helvetica",Font.BOLD,15));
-    cost.setFont(new Font("Helvetica",Font.BOLD,15));
+    cost.setFont(new Font("Helvetica",Font.BOLD,25));
     
     purchase.addActionListener(this);
     previous.addActionListener(this);
@@ -158,9 +158,9 @@ class Shoes2 extends JPanel implements ActionListener {
     this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
-    title.setFont(new Font("Helvetica",Font.BOLD,15));
+    title.setFont(new Font("Helvetica",Font.BOLD,25));
     description.setFont(new Font("Helvetica",Font.BOLD,15));
-    cost.setFont(new Font("Helvetica",Font.BOLD,15));
+    cost.setFont(new Font("Helvetica",Font.BOLD,25));
     
     purchase.addActionListener(this);
     previous.addActionListener(this);
@@ -222,9 +222,9 @@ class Shoes3 extends JPanel implements ActionListener {
     this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
-    title.setFont(new Font("Helvetica",Font.BOLD,15));
+    title.setFont(new Font("Helvetica",Font.BOLD,25));
     description.setFont(new Font("Helvetica",Font.BOLD,15));
-    cost.setFont(new Font("Helvetica",Font.BOLD,15));
+    cost.setFont(new Font("Helvetica",Font.BOLD,25));
     
     purchase.addActionListener(this);
     previous.addActionListener(this);
@@ -287,10 +287,10 @@ class Shoes4 extends JPanel implements ActionListener {
     this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
-    title.setFont(new Font("Helvetica",Font.BOLD,15));
+    title.setFont(new Font("Helvetica",Font.BOLD,25));
     description.setFont(new Font("Helvetica",Font.BOLD,15));
     description2.setFont(new Font("Helvetica",Font.BOLD,15));
-    cost.setFont(new Font("Helvetica",Font.BOLD,15));
+    cost.setFont(new Font("Helvetica",Font.BOLD,25));
     
     purchase.addActionListener(this);
     previous.addActionListener(this);
