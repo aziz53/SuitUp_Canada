@@ -98,6 +98,7 @@ class Accesories1 extends JPanel implements ActionListener {
   JLabel cost = new JLabel("$37.99");
   
   public Accesories1(){
+    this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,15));
@@ -178,6 +179,7 @@ class Accesories2 extends JPanel implements ActionListener {
   JLabel cost = new JLabel("$3820.22");
   
   public Accesories2(){
+    this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,15));
@@ -266,6 +268,7 @@ class Accesories3 extends JPanel implements ActionListener {
   JLabel cost = new JLabel("$1,295.00");
   
   public Accesories3(){
+    this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,15));
@@ -353,6 +356,7 @@ class Accesories4 extends JPanel implements ActionListener {
   JLabel cost = new JLabel("$20.00");
   
   public Accesories4(){
+    this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,15));
@@ -433,6 +437,7 @@ class Accesories5 extends JPanel implements ActionListener {
   JLabel cost = new JLabel("$58.26");
   
   public Accesories5(){
+    this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
     title.setFont(new Font("Helvetica",Font.BOLD,15));
