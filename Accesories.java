@@ -1,4 +1,3 @@
-import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -156,7 +155,9 @@ class Accesories1 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
@@ -245,7 +246,9 @@ class Accesories2 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
@@ -334,7 +337,9 @@ class Accesories3 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
@@ -418,12 +423,14 @@ class Accesories4 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
 
-class Accesories5 extends JPanel implements ActionListener {
+class Accesories5 extends JPanel implements ActionListener{
   GridBagConstraints gbc = new GridBagConstraints();
   
   JButton previous = new JButton("PREVIOUS");
@@ -487,7 +494,9 @@ class Accesories5 extends JPanel implements ActionListener {
       System.exit(0);
     }else if(e.getSource().equals(purchase)){
       this.setVisible(false);
-      SuitUpCanada.mainGame.add(new Purchase());
+      try{
+        SuitUpCanada.mainGame.add(new Purchase());
+      }catch(Exception exception){};
     }
   }
 }
