@@ -102,13 +102,13 @@ class Suit1 extends JPanel implements ActionListener {
     this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
-    title.setFont(new Font("Helvetica",Font.BOLD,15));
+    title.setFont(new Font("Helvetica",Font.BOLD,25));
     description.setFont(new Font("Helvetica",Font.BOLD,15));
     description2.setFont(new Font("Helvetica",Font.BOLD,15));
     description3.setFont(new Font("Helvetica",Font.BOLD,15));
     description4.setFont(new Font("Helvetica",Font.BOLD,15));
     description5.setFont(new Font("Helvetica",Font.BOLD,15));
-    cost.setFont(new Font("Helvetica",Font.BOLD,15));
+    cost.setFont(new Font("Helvetica",Font.BOLD,25));
     
     purchase.addActionListener(this);
     previous.addActionListener(this);
@@ -187,14 +187,14 @@ class Suit2 extends JPanel implements ActionListener {
     this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
-    title.setFont(new Font("Helvetica",Font.BOLD,15));
+    title.setFont(new Font("Helvetica",Font.BOLD,25));
     description.setFont(new Font("Helvetica",Font.BOLD,15));
     description2.setFont(new Font("Helvetica",Font.BOLD,15));
     description3.setFont(new Font("Helvetica",Font.BOLD,15));
     description4.setFont(new Font("Helvetica",Font.BOLD,15));
     description5.setFont(new Font("Helvetica",Font.BOLD,15));
     description6.setFont(new Font("Helvetica",Font.BOLD,15));
-    cost.setFont(new Font("Helvetica",Font.BOLD,15));
+    cost.setFont(new Font("Helvetica",Font.BOLD,25));
     
     purchase.addActionListener(this);
     previous.addActionListener(this);
@@ -273,11 +273,11 @@ class Suit3 extends JPanel implements ActionListener {
     this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
-    title.setFont(new Font("Helvetica",Font.BOLD,15));
+    title.setFont(new Font("Helvetica",Font.BOLD,25));
     description.setFont(new Font("Helvetica",Font.BOLD,15));
     description2.setFont(new Font("Helvetica",Font.BOLD,15));
     description3.setFont(new Font("Helvetica",Font.BOLD,15));
-    cost.setFont(new Font("Helvetica",Font.BOLD,15));
+    cost.setFont(new Font("Helvetica",Font.BOLD,25));
     
     purchase.addActionListener(this);
     previous.addActionListener(this);
@@ -347,11 +347,11 @@ class Suit4 extends JPanel implements ActionListener {
     this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
-    title.setFont(new Font("Helvetica",Font.BOLD,15));
+    title.setFont(new Font("Helvetica",Font.BOLD,25));
     description.setFont(new Font("Helvetica",Font.BOLD,15));
     description2.setFont(new Font("Helvetica",Font.BOLD,15));
     description3.setFont(new Font("Helvetica",Font.BOLD,15));
-    cost.setFont(new Font("Helvetica",Font.BOLD,15));
+    cost.setFont(new Font("Helvetica",Font.BOLD,25));
     
     purchase.addActionListener(this);
     previous.addActionListener(this);
@@ -420,10 +420,10 @@ class Suit5 extends JPanel implements ActionListener {
     this.setBackground(new Color(255,255,255));
     setLayout(new GridBagLayout());
     
-    title.setFont(new Font("Helvetica",Font.BOLD,15));
+    title.setFont(new Font("Helvetica",Font.BOLD,25));
     description.setFont(new Font("Helvetica",Font.BOLD,15));
     description2.setFont(new Font("Helvetica",Font.BOLD,15));
-    cost.setFont(new Font("Helvetica",Font.BOLD,15));
+    cost.setFont(new Font("Helvetica",Font.BOLD,25));
     
     purchase.addActionListener(this);
     previous.addActionListener(this);
