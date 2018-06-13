@@ -10,6 +10,7 @@ public class EmployeeMenu extends JPanel implements ActionListener {
   JLabel employeeMenu = new JLabel("Employee Menu");
   JButton hrButton = new JButton("HUMAN RESOURCES");
   JButton accountingButton = new JButton("ACCOUNTING");
+  JButton bookAppointment = new JButton("BOOK APPOINTMENT");
   JButton quit = new JButton("QUIT");
   
   public EmployeeMenu(){
@@ -19,7 +20,7 @@ public class EmployeeMenu extends JPanel implements ActionListener {
     hrButton.addActionListener(this);
     accountingButton.addActionListener(this);
     quit.addActionListener(this);
-    
+    bookAppointment.addActionListener(this);
     gbc.fill = GridBagConstraints.HORIZONTAL;
     gbc.insets = new Insets(20,50,20,50);
     
@@ -37,6 +38,9 @@ public class EmployeeMenu extends JPanel implements ActionListener {
     employeeMenu.setFont(new Font("Serif", Font.BOLD, 20));
     add(employeeMenu, gbc);
     gbc.gridx = 3;
+    gbc.gridy=3;
+    add(bookAppointment,gbc);
+    gbc.gridx = 3;
     gbc.gridy = 5;
     add(quit, gbc);
   }
@@ -48,6 +52,7 @@ public class EmployeeMenu extends JPanel implements ActionListener {
       
       
       if(buttonPressed.equals(accountingButton)){
+        this.setVisible(false);
         this.add(new AccountingPanel());
         SuitUpCanada.mainGame.add(new AccountingPanel());
       }
@@ -55,6 +60,11 @@ public class EmployeeMenu extends JPanel implements ActionListener {
         this.setVisible(false);
         this.add(new HumanResources());
         SuitUpCanada.mainGame.add(new HumanResources());
+      }
+       else if(buttonPressed.equals(bookAppointment)) {
+        this.setVisible(false);
+        this.add(new BookAppointment());
+        SuitUpCanada.mainGame.add(new BookAppointment());
       }
       else if(buttonPressed.equals(quit)){
         System.exit(0);

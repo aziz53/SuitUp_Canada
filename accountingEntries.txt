@@ -1,0 +1,2 @@
+Suit Rental|Cash-500|Sales-500|2018/06/25
+Suits|A-1000|B-1000|2000/05/02
