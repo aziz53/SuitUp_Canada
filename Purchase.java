@@ -3,6 +3,7 @@
  * By Aziz, James, Jerry
  * GUI for when the user wants to complete a purchase and outputs to
  * a text file the information of the user making the purchase
+ * June 14, 2018
  */
 
 //Import Statements
