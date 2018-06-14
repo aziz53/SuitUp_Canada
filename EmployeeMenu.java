@@ -65,6 +65,7 @@ public class EmployeeMenu extends JPanel implements ActionListener {
         this.setVisible(false);
         this.add(new BookAppointment());
         SuitUpCanada.mainGame.add(new BookAppointment());
+         
       }
       else if(buttonPressed.equals(quit)){
         System.exit(0);

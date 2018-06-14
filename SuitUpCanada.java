@@ -7,12 +7,14 @@ import java.io.*;
   public static SuitUpCanada mainGame;
   public static ArrayList<Employee> employeeList = new ArrayList<Employee>();
    public static ArrayList<Entry> accountingEntries = new ArrayList<Entry>();
+   public static ArrayList<ServiceEntry> serviceEntries = new ArrayList<ServiceEntry>();
   public static String currentName;
   public static String currentNum;
   public static String currentPosition;
   public static int currentStatus;
   Scanner input;
   Scanner input2;
+  Scanner input3;
   SuitUpCanada() throws Exception{
     input = new Scanner(new File("Employee Info.txt"));
     while(input.hasNext()){
@@ -51,8 +53,18 @@ import java.io.*;
       accountingEntries.add(new Entry(debit,credit,date,item));
   
     }
+    input3 = new Scanner(new File("serviceEntries.txt"));
+    while(input3.hasNext()){
+     String total = input3.nextLine();
+      String date = total.substring(0,total.indexOf("|"));
+      total = total.substring(total.indexOf("|") + 1);
+     
+      serviceEntries.add(new ServiceEntry(date,total));
+  
+    }
     input.close();
     input2.close();
+    input3.close();
     this.setVisible(true);
     this.setSize(1920,1080);
     this.setResizable(true);
@@ -60,5 +72,6 @@ import java.io.*;
   }
   public static void main(String args[]) throws Exception{
     mainGame = new SuitUpCanada();
+    
   }
 }
